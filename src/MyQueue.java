@@ -33,7 +33,7 @@ public class MyQueue<T> {
     public void pop() {
         if (size > 1) head = head.next;
             else if (size == 1) head = tail = null;
-        size--;
+        if(size > 0) size--;
     }
     public int size() {
         return size;
@@ -56,6 +56,6 @@ public class MyQueue<T> {
             // e.printStackTrace();
             return null;
         }
-    }  //in fact, only Dequeue implements such method. However, "node"-like construction allows coding methods like this
+    }
 
 }
